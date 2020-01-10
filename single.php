@@ -1,6 +1,16 @@
 <?php get_header(); ?>
 
-<?php $post = get_post($id, $output, $filter);
+<?php 
+$post = get_post($id, $output, $filter);
+$tags = get_the_tags($id);
+
+echo "TITLE=".$post->post_title."<br />";
+echo "TAGS=".implode(",", array_column($tags, "name"))."<br />";
+
+
+echo "<pre>";
+print_r($tags);
+echo "</pre>";
 
 echo "<pre>";
 print_r($post);
