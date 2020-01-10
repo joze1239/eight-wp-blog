@@ -1,6 +1,6 @@
 <?php
 
-function load_posts($paged = 0, $posts_per_page = 4, $tag = '', $search = '')
+function load_posts($paged = 0, $posts_per_page = 6, $tag = '', $search = '')
 {
     $args = array(
         'post_type' => 'post',

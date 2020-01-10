@@ -1,18 +1,16 @@
 
-var defaultPage = 2;
-var page = defaultPage;
-var postsPerPage = 2;
-var minPostsPerPage = 4; // Minimum posts on load/change tags
+var page = 1;
+var postsPerPage = 6;
 var tag = ''; // If empty string it loads all tags
 var search = '';
 
 jQuery(function ($) {
     function reloadPosts() {
-        page = defaultPage;
+        page = 1;
         var data = {
             'action': 'load_posts_by_ajax',
             'page': 0,
-            'posts_per_page': minPostsPerPage,
+            'posts_per_page': postsPerPage,
             'tag': tag,
             'search': search,
             'security': blog.security

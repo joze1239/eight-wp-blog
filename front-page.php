@@ -24,18 +24,18 @@
                         <?php endwhile; ?>
                     </div>
                 <?php endif; */ ?>
-                <div class="blog-posts">
-                    <?php load_posts(); ?>
-                </div>
-                <button id="loadmore">Load More...</button>
-                <select id="select_tag">
+                 <input id="search" type="text" placeholder="Search" /> 
+                 <select id="select_tag">
                     <option value="All">All categories</option>
                     <option value="Culture">Culture</option>
                     <option value="Lifestyle">Lifestyle</option>
                     <option value="Product">Product</option>
                     <option value="Trending">Trending</option>
                 </select>
-                <input id="search" type="text" placeholder="Search" /> 
+                <div class="blog-posts">
+                    <?php load_posts(); ?>
+                </div>
+                <button id="loadmore">Load More...</button>      
             </div>
         </main><!-- #main -->
     </div><!-- #primary -->
