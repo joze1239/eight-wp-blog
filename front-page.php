@@ -5,6 +5,8 @@
         <main id="main" class="site-main" role="main">
             <div class="entry-content">
                 <?php
+                // Example of loading posts
+                /*
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
@@ -21,8 +23,19 @@
                             <?php the_excerpt(); ?>
                         <?php endwhile; ?>
                     </div>
-                    <button class="loadmore">Load More...</button>
-                <?php endif; ?>
+                <?php endif; */ ?>
+                <div class="blog-posts">
+                    <?php load_posts(); ?>
+                </div>
+                <button id="loadmore">Load More...</button>
+                <select id="select_tag">
+                    <option value="All">All categories</option>
+                    <option value="Culture">Culture</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Product">Product</option>
+                    <option value="Trending">Trending</option>
+                </select>
+                <input id="search" type="text" placeholder="Search" /> 
             </div>
         </main><!-- #main -->
     </div><!-- #primary -->
